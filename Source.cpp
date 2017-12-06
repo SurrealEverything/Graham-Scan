@@ -105,7 +105,7 @@ void GrahamScan()
 		createHull();
 		for (int i = 3; i < noncollinearPoints.size(); ++i)
 		{
-			while (orientation(nextToTop(hull), hull.top(), noncollinearPoints[3]) != -1)//right turn or collinear points
+			while (orientation(nextToTop(hull), hull.top(), noncollinearPoints[i]) != -1)//right turn or collinear points
 				hull.pop();
 			hull.push(noncollinearPoints[i]);
 		}
