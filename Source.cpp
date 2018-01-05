@@ -95,9 +95,10 @@ void GrahamScan()
 {
 	sortByPolar();
 	clearCollinear();
-	if (noncollinearPoints.size() < 3)//must be a polygon
+	if (noncollinearPoints.size() < 3)//line
 	{
-		cout << "Convex hull not possible!\n";
+		hull.push(noncollinearPoints[0]);
+		hull.push(noncollinearPoints[1]);
 		return;
 	}
 	else
